@@ -6,7 +6,7 @@ func Setup(app *AppInit) {
 	swatchesContainer := BuildSwatches(app)
 	colorPicker := SetupColoPicker(app)
 
-	appLayout := container.NewBorder(nil, swatchesContainer, nil, colorPicker) // top, bottom, left, right
+	appLayout := container.NewBorder(nil, swatchesContainer, nil, colorPicker, app.PixlCanvas) // top, bottom, left, right, all else is in center
 
 	app.PixlWindow.SetContent(appLayout)
 }
